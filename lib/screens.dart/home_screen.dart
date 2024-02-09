@@ -106,13 +106,30 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(
-                    '$digitmin:$digitsec:$digitmilli',
-                    style: const TextStyle(
-                      fontSize: 60,
-                      color: Color.fromARGB(171, 255, 255, 255),
-                      fontWeight: FontWeight.w300,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        '$digitmin:$digitsec',
+                        style: const TextStyle(
+                          fontSize: 60,
+                          color: Color.fromARGB(171, 255, 255, 255),
+                          fontWeight: FontWeight.w300,
+                          textBaseline: TextBaseline.alphabetic,
+                        ),
+                      ),
+                      Text(
+                        '.$digitmilli',
+                        style: const TextStyle(
+                          fontSize: 40,
+                          color: Color.fromARGB(171, 255, 255, 255),
+                          fontWeight: FontWeight.w300,
+                          textBaseline: TextBaseline.alphabetic,
+                        ),
+                        textAlign: TextAlign.end,
+                      ),
+                    ],
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15.0),
