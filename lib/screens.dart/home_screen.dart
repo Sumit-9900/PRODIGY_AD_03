@@ -153,16 +153,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          // resets
-                          //     ? Expanded(
-                          //         child: ListView.builder(
-                          //           itemCount: 0,
-                          //           itemBuilder: (context, index) {
-                          //             return null;
-                          //           },
-                          //         ),
-                          //       )
-                          //     :
                           Expanded(
                             child: ListView.builder(
                               itemCount: (!started && resets) ? 0 : laps.length,
@@ -223,7 +213,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-                // const SizedBox(height: 5),
               ],
             ),
           ),
